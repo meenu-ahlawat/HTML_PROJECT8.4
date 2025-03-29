@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>media queries</title>
+<style>
+body{background:#F6F0F0;}
+    
+    body{
+  font-family: "Poppins", sans-serif;
+  margin: 50px;
+  background-color: #faf9f6;
+  display:flex;
+  flex-direction:column;/* could be used clear property for moving footer at the bottom by adding margin-bottom in .third div , 
+  however it will keep moving footer with screen size changes but we used flex to create column of direct chilkdren in body 
+  and give it viewport height of 90hv which will put our footer at the bottom and keep it static till reach the width of 680px  */
+  height:90vh;
+
+    }
+    .first{flex:1;}
+
+    
+    .second{
+        float:left;
+        width:45%;} /* could use .card element to define width for both images in .second and .third*/
+
+    .third{
+        float:right;
+        width:45%;
+        }
+    
+    
+    .image{height:220px;
+    float:left;
+    margin-right:10px;}
+    
+   h2{
+   padding:5px;}
+   
+   h1{ font-size:80px;}
+
+   footer{ clear:both;
+   text-align:right;
+   color:midnightblue;
+   }
+
+   @media (max-width:690px){
+    body{background:grey;}
+    .logo{width:100px;}
+    h1{text-align:center;
+        font-size:60px;}
+    .card{ display:block;
+            text-align:justify;
+            width:100%;
+            margin-bottom:30px;}
+    .card img{
+            width:100%;
+            object-fit:cover;
+            margin-bottom:30px;
+    }
+    
+
+
+
+   }
+
+</style>
+
+</head>
+<body>
+<div class="first">
+    <img class="logo" src="./assets8.4/logo.png">
+    <h1>
+    We are a <span style="color:blue;"> Creative</span> <br> Design Agency</h1>
+    
+
+    <div class="second card">
+        <img class="image" src="https://d2rqvd0kuag1qx.cloudfront.net/_1280xAUTO_crop_center-center_none/092717_NatureMuseum-473_2024-03-28-194159_jaul.jpg">
+        <h2>
+        Beauty
+        </h2>
+        <p>
+        We strive to create the most beautiful websites for all your needs. Working closely with you to design and develop an amazing website for your business.
+        </p>
+    </div>
+
+    <div class="third card">
+        <img class="image" src="https://thumbs.dreamstime.com/b/construction-site-sunset-7507349.jpg">
+        <h2>
+        Construction
+        </h2>
+        <p>
+        Built by our team of professional developers, we ensure the most rigourous and modern websites. Built from scratch using HTML and CSS. Only the best for you.
+        </p>
+    </div>
+    <br>
+</div>
+<footer>
+  Create.Develop.Design
+</footer>
+</body>
+</html>
